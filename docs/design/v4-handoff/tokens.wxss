@@ -1,0 +1,43 @@
+/* V4设计变量：390px稿转750rpx；引入page节点。原生导航使用真实安全区。 */
+page {
+  --canvas: #10191c;
+  --surface: #1c282c;
+  --surfaceRaised: #243237;
+  --text: #f4f5f1;
+  --muted: #b2bfbd;
+  --border: #3b4c4d;
+  --primary: #367d65;
+  --primaryPressed: #28614e;
+  --accent: #96dfbe;
+  --card: #f5efdf;
+  --cardInk: #172321;
+  --cardRed: #a52b36;
+  --cardMine: #d3ebdc;
+  --cardOther: #d7e5f6;
+  --danger: #ffb8b8;
+  --spacing-xs: 7.69rpx;
+  --spacing-sm: 15.38rpx;
+  --spacing-md: 23.08rpx;
+  --spacing-lg: 30.77rpx;
+  --spacing-xl: 46.15rpx;
+  --spacing-xxl: 61.54rpx;
+  --radius-card: 15.38rpx;
+  --radius-panel: 23.08rpx;
+  --radius-button: 23.08rpx;
+  --radius-pill: 9999rpx;
+  --fontSize-caption: 23.08rpx;
+  --fontSize-body: 26.92rpx;
+  --fontSize-control: 30.77rpx;
+  --fontSize-section: 34.62rpx;
+  --fontSize-title: 42.31rpx;
+  --fontSize-score: 53.85rpx;
+  --fontSize-hero: 61.54rpx;
+  background: var(--canvas);
+  color: var(--text);
+}
+.v4-content { padding: 0 30.77rpx; }
+.v4-primary { min-height: 100rpx; border-radius: 23.08rpx; background: var(--primary); color: #fff; }
+.v4-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15.38rpx; }
+.v4-public-card { height: 115.38rpx; border-radius: 11.54rpx; }
+.v4-own-card { height: 276.92rpx; border-radius: 15.38rpx; }
+.v4-hit-target { min-width: 84.62rpx; min-height: 84.62rpx; }

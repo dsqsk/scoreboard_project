@@ -1,0 +1,43 @@
+{
+  "name": "scoreboard",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": "^22.13.0 || >=24.0.0"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run lint && npm run typecheck",
+    "dev": "npm run dev --workspace @scoreboard/miniapp",
+    "build": "npm run build --workspace @scoreboard/cloud && npm run build --workspace @scoreboard/miniapp",
+    "typecheck": "npm run typecheck --workspaces",
+    "build:cloud": "npm run build --workspace @scoreboard/cloud",
+    "build:miniapp": "npm run build --workspace @scoreboard/miniapp",
+    "dev:miniapp:cloud": "npm run dev:cloud --workspace @scoreboard/miniapp",
+    "build:miniapp:cloud": "npm run build:cloud --workspace @scoreboard/miniapp",
+    "cloud:check": "npx --yes --package @cloudbase/cli@3.8.7 tcb env detail --yes --json",
+    "check:cloud-package": "node apps/cloud/scripts/check-deploy.mjs",
+    "dev:miniapp:http": "npm run dev:http --workspace @scoreboard/miniapp",
+    "build:miniapp:http": "npm run build:http --workspace @scoreboard/miniapp",
+    "build:http": "npm run build:http --workspace @scoreboard/cloud"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "eslint": "10.13.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.13.0",
+    "prettier": "3.9.10",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "8.72.0"
+  }
+}

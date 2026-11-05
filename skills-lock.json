@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "cloud-functions": {
+      "source": "tencentcloudbase/skills",
+      "sourceType": "github",
+      "skillPath": "skills/cloud-functions/SKILL.md",
+      "computedHash": "74dda58221dbc55c9b7c69081359c12fcf3747838b094831afa0dad46bf5a828"
+    },
+    "cloudbase-platform": {
+      "source": "TencentCloudBase/CloudBase-AI-ToolKit",
+      "sourceType": "github",
+      "skillPath": "plugin/cloudbase/skills/cloudbase-platform/SKILL.md",
+      "computedHash": "62e8eb5fbd3fd9baca2c44bb83d39fa6f8ab4d507a183f53881cb0dbc15508d0"
+    }
+  }
+}

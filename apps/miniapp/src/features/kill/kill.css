@@ -1,0 +1,228 @@
+.kill-opponents {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.kill-opponent {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  min-width: 0;
+}
+.kill-avatar {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #2d594a;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.kill-avatar--blue {
+  background: #304d62;
+  color: #b0cee7;
+}
+.kill-opponent-copy {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.kill-opponent-name,
+.kill-opponent-remaining {
+  display: block;
+}
+.kill-count {
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 600;
+}
+.kill-hand-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0 8px;
+}
+.kill-hand-title > .muted {
+  font-size: 13px;
+}
+.kill-hand {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 12px;
+  row-gap: 48px;
+  padding-top: 36px;
+}
+.kill-card-wrap {
+  position: relative;
+  min-width: 0;
+}
+.kill-card,
+.kill-add-card {
+  position: relative;
+  width: 100%;
+  height: clamp(120px, 36.9vw, 144px);
+  border-radius: 8px;
+}
+.kill-card {
+  background: var(--card);
+  color: var(--card-ink);
+  border: 1px solid #e4d9c1;
+  overflow: hidden;
+}
+.kill-card-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.kill-card--potted {
+  background: #9b9e97;
+  border-color: #818c83;
+}
+.kill-card--potted .kill-card-image {
+  opacity: 0.45;
+}
+.kill-potted-label {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #43534e;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.kill-undo {
+  position: absolute;
+  top: -44px;
+  left: 0;
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  font-size: 12px;
+  color: var(--text);
+}
+.kill-undo-label {
+  display: block;
+  width: calc(100% - 16px);
+  border: 1px solid #8caaa0;
+  background: #23322e;
+  color: var(--text);
+  border-radius: 20px;
+  padding: 4px 0;
+}
+.kill-add-card {
+  border: 1px dashed #8bbba8;
+  background: transparent;
+  color: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.kill-plus {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 300;
+}
+.kill-helper {
+  display: block;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  margin: 22px 0;
+  line-height: 1.7;
+}
+.kill-picker {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin: 16px 0;
+}
+.kill-pick {
+  min-height: 44px;
+  padding: 6px 2px;
+  background: #293a3d;
+  color: var(--text);
+  border: 1px solid #68817b;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.kill-pick--selected {
+  background: var(--primary);
+  border-color: var(--accent);
+}
+.kill-person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  color: var(--text);
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: left;
+}
+.kill-person--selected {
+  border-color: var(--accent);
+  background: #203b31;
+}
+.kill-person--selected.ui-button--disabled {
+  border-color: var(--accent);
+  color: var(--text);
+  background: #203b31;
+}
+.kill-form-row,
+.kill-result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.kill-form-row > text,
+.kill-result-row > text:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.kill-count-input {
+  width: 88px;
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #6b817c;
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--canvas);
+}
+.kill-result {
+  margin-top: 20px;
+}
+.kill-result-title,
+.kill-result-date {
+  display: block;
+  margin-bottom: 6px;
+}
+.kill-result-score {
+  color: var(--accent);
+  font-size: 20px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}

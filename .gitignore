@@ -1,0 +1,24 @@
+node_modules/
+**/dist/
+.env
+.env.local
+project.private.config.json
+.DS_Store
+*.tsbuildinfo
+
+**/.preview/
+
+# Developer-only overrides
+.env.*.local
+
+# Local agent configuration and credentials
+.agents/
+.claude/
+.codex/
+**/.swc/
+*.pem
+*.key
+*.p12
+*.pfx
+*.sql
+*.sql.gz

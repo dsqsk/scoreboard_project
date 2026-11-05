@@ -1,0 +1,23 @@
+[Unit]
+Description=Scoreboard HTTP API
+After=network-online.target mysql.service
+Wants=network-online.target
+[Service]
+Type=simple
+User=scoreboard
+Group=scoreboard
+WorkingDirectory=/opt/scoreboard/current
+EnvironmentFile=/etc/scoreboard/scoreboard.env
+ExecStart=/opt/scoreboard/node/bin/node --max-old-space-size=256 server.cjs
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/scoreboard
+UMask=0077
+MemoryMax=512M
+TimeoutStopSec=30
+[Install]
+WantedBy=multi-user.target

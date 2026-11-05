@@ -1,0 +1,15 @@
+node_modules/
+**/dist/
+**/.preview/
+**/.swc/
+.git/
+.agents/
+.claude/
+.codex/
+docs/
+reports/
+tasks/
+*.md
+package-lock.json
+skills-lock.json
+project.private.config.json

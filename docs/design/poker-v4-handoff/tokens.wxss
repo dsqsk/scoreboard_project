@@ -1,0 +1,35 @@
+/* V4 poker design reference. Values: CSSpx * 750 / 390 -> rpx. */
+page {
+  --poker-canvas: #10191C;
+  --poker-surface: #1C282C;
+  --poker-raised: #243237;
+  --poker-text: #F4F5F1;
+  --poker-muted: #B2BFBD;
+  --poker-border: #3B4C4D;
+  --poker-primary: #367D65;
+  --poker-pressed: #28614E;
+  --poker-accent: #96DFBE;
+  --poker-ivory: #F5EFDF;
+  --poker-ink: #172321;
+  --poker-selected: #D3EBDC;
+  --poker-negative: #FFB8B8;
+  --poker-disabled: #2C383C;
+  --poker-disabledText: #A6B4B2;
+  background: var(--poker-canvas); color: var(--poker-text);
+}
+.poker-page { padding: 0 30.77rpx; color: var(--poker-text); }
+.poker-button { box-sizing: border-box; margin: 0; padding: 0; color: var(--poker-text); line-height: 1.4; }
+.poker-button::after { border: 0; }
+.poker-panel { padding: 23.08rpx; border: 1px solid var(--poker-border); border-radius: 23.08rpx; background: var(--poker-surface); }
+.poker-players { display: flex; width: 100%; }
+.poker-player { flex: 1 1 0%; width: 0; min-width: 0; text-align: center; }
+.poker-entry { display: flex; gap: 23.08rpx; }
+.poker-controls { flex: 0 0 123.08rpx; display: flex; flex-direction: column; gap: 23.08rpx; }
+.poker-control { width: 100%; min-height: 153.85rpx; color: var(--poker-text); background: var(--poker-surface); border: 1px solid var(--poker-border); border-radius: 19.23rpx; }
+.poker-control--selected { color: var(--poker-ink); background: var(--poker-accent); border-color: var(--poker-accent); }
+.poker-values { flex: 1 1 0%; width: 0; min-width: 0; display: flex; flex-wrap: wrap; gap: 15.38rpx; }
+.poker-value { width: calc((100% - 15.38rpx) / 2); min-width: 0; min-height: 111.54rpx; color: var(--poker-ink); background: var(--poker-ivory); border: 1px solid #e4d9c1; border-radius: 15.38rpx; font-size: 48.08rpx; }
+.poker-value--duijia { width: 100%; min-height: 246.15rpx; }
+.poker-value--selected { background: var(--poker-selected); border: 2px solid var(--poker-primary); }
+.poker-confirm { width: 100%; min-height: 100rpx; margin-top: 46.15rpx; color: #fff; background: var(--poker-primary); border-radius: 23.08rpx; font-size: 30.77rpx; }
+.poker-confirm[disabled] { color: var(--poker-disabledText); background: var(--poker-disabled); }

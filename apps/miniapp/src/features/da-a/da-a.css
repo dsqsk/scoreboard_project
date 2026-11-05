@@ -1,0 +1,28 @@
+.daa-total-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.daa-person {
+  width: 100%;
+  min-height: 52px;
+  margin: 8px 0;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+  line-height: 1.5;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--canvas);
+}
+.daa-person--selected,
+.daa-person--selected.ui-button--disabled {
+  border-color: var(--accent);
+  background: #203b31;
+  color: var(--text);
+}

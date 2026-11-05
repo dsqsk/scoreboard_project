@@ -1,0 +1,42 @@
+{
+  "description": "部署清单说明；不会自动创建集合或应用权限。此阶段所有集合拒绝客户端直接读写，统一调用api云函数。",
+  "collections": [
+    "users",
+    "rooms",
+    "room_codes",
+    "room_members",
+    "activities",
+    "activity_scores",
+    "activity_cards",
+    "commands",
+    "user_room_signals",
+    "notification_outbox",
+    "result_slots",
+    "rate_limits",
+    "point_changes",
+    "point_results",
+    "point_totals",
+    "da_a_entries",
+    "da_a_totals"
+  ],
+  "clientPermissions": { "read": false, "write": false },
+  "indexes": [
+    {
+      "collection": "room_members",
+      "fields": [
+        ["roomId", "asc"],
+        ["status", "asc"],
+        ["_id", "asc"]
+      ]
+    },
+    {
+      "collection": "room_members",
+      "fields": [
+        ["userId", "asc"],
+        ["status", "asc"],
+        ["lastVisitedAt", "desc"],
+        ["_id", "asc"]
+      ]
+    }
+  ]
+}

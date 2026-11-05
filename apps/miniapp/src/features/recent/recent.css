@@ -1,0 +1,57 @@
+.recent-swipe {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #913f48;
+}
+.recent-delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #913f48;
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recent-front {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: 120px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: transform 0.18s ease;
+  touch-action: pan-y;
+}
+.recent-front--dragging {
+  transition: none;
+}
+.recent-front .room-card__bottom {
+  margin-top: 12px;
+}
+.recent-front .room-card__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.recent-rooms {
+  margin-top: 0;
+}
+.recent-front .room-card__bottom {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 12px;
+  margin: 0;
+}

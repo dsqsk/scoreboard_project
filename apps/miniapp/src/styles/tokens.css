@@ -1,0 +1,18 @@
+/* Generated from docs/design/v4-handoff/tokens.json. */
+page {
+  --canvas: #10191c;
+  --surface: #1c282c;
+  --surface-raised: #243237;
+  --text: #f4f5f1;
+  --muted: #b2bfbd;
+  --border: #3b4c4d;
+  --primary: #367d65;
+  --primary-pressed: #28614e;
+  --accent: #96dfbe;
+  --card: #f5efdf;
+  --card-ink: #172321;
+  --card-red: #a52b36;
+  --card-mine: #d3ebdc;
+  --card-other: #d7e5f6;
+  --danger: #ffb8b8;
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.cloudbase.net/cli/cloudbaserc.schema.json",
+  "envId": "scoreboard-d7giv4iri8369fe43",
+  "functionRoot": "apps/cloud/dist",
+  "functions": [
+    {
+      "name": "api",
+      "handler": "index.main",
+      "runtime": "Nodejs20.19",
+      "timeout": 20,
+      "memorySize": 256,
+      "installDependency": true,
+      "type": "Event"
+    },
+    {
+      "name": "health",
+      "handler": "index.main",
+      "runtime": "Nodejs20.19",
+      "timeout": 5,
+      "memorySize": 256,
+      "installDependency": true,
+      "type": "Event"
+    }
+  ]
+}
